@@ -1,0 +1,23 @@
+- Decision Tree model
+    - unstable -> Ensemble trees
+    - 1) Bagging tree
+    - 2) Random forest
+    - 3) Boosting tree
+    - 4) Gradient Boosting tree
+    - 5) XGBoost
+
+tree model complexity -> #leaf nodes
+    tree1(#leaf_node = 5)       mse = 0.75
+    tree2(#leaf_node = 100)     mse = 0.749999
+
+    model performance + model complexity = regularization
+    Thus, we choose tree1
+
+Decision Tree (auto feature selection) -> means the tree doesn't use all features we provide
+    - .feature_importances_ จะบ่งบอกว่าแต่ feature มีความสำคัญอย่างไร หากเป็น 0 คือไม่ได้ใช้
+
+------------------------------
+- Model evaluation
+    - classification_report(): accuracy, precision, recall, f1. macro, weight
+    - confusion_matrix():      tp, tn, fp, fn
+    - regression: mae, mse -> rmse, r^2
